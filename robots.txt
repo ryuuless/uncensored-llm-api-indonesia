@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://ryuuless.github.io/uncensored-llm-api-indonesia/sitemap.xml
+
+# API LLM tanpa sensor untuk developer Indonesia
+# API model bahasa tanpa filter ideologis, kompatibel dengan OpenAI, untuk developer Indonesia. Base URL https://uncensored-llm.sbs/v1, streaming, tool calling, dokumentasi Bahasa Indonesia.

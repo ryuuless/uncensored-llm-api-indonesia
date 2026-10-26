@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="id-ID">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>API LLM tanpa sensor untuk developer Indonesia</title>
+<meta name="description" content="API model bahasa tanpa filter ideologis, kompatibel dengan OpenAI, untuk developer Indonesia. Base URL https://uncensored-llm.sbs/v1, streaming, tool calling, dokumentasi Bahasa Indonesia.">
+<meta name="keywords" content="api llm tanpa sensor, llm tanpa filter, alternatif openai, api ai tanpa sensor, model bahasa bebas, llm api indonesia">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="author" content="uncensored-llm.sbs">
+<link rel="canonical" href="https://ryuuless.github.io/uncensored-llm-api-indonesia/">
+<link rel="alternate" hreflang="pt-BR" href="https://brown1023.github.io/llm-api-sem-censura-brasil/">
+<link rel="alternate" hreflang="es-419" href="https://brown1023.github.io/api-llm-sin-censura-latam/">
+<link rel="alternate" hreflang="vi-VN" href="https://ryuuless.github.io/uncensored-llm-api-vietnam/">
+<link rel="alternate" hreflang="tr-TR" href="https://askcode24.github.io/sansursuz-llm-api-turkiye/">
+<link rel="alternate" hreflang="de-DE" href="https://askcode24.github.io/uncensored-llm-api-deutschland/">
+<link rel="alternate" hreflang="es-ES" href="https://palazuel0s2004.github.io/api-llm-sin-censura-espana/">
+<link rel="alternate" hreflang="it-IT" href="https://palazuel0s2004.github.io/llm-api-senza-censura-italia/">
+<link rel="alternate" hreflang="en-IN" href="https://nirav0712.github.io/uncensored-llm-api-india/">
+<link rel="alternate" hreflang="en-PH" href="https://nirav0712.github.io/uncensored-llm-api-philippines/">
+<link rel="alternate" hreflang="ar" href="https://mohamedabderrehman.github.io/uncensored-llm-api-arabia/">
+<link rel="alternate" hreflang="ar-EG" href="https://mohamedabderrehman.github.io/uncensored-llm-api-egypt/">
+<link rel="alternate" hreflang="x-default" href="https://uncensored-llm.sbs/">
+<meta name="geo.region" content="ID-JK">
+<meta name="geo.placename" content="Jakarta, Indonesia">
+<meta name="ICBM" content="-6.2088, 106.8456">
+<meta name="language" content="id-ID">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="uncensored-llm.sbs">
+<meta property="og:title" content="API LLM tanpa sensor untuk developer Indonesia">
+<meta property="og:description" content="API model bahasa tanpa filter ideologis, kompatibel dengan OpenAI, untuk developer Indonesia. Base URL https://uncensored-llm.sbs/v1, streaming, tool calling, dokumentasi Bahasa Indonesia.">
+<meta property="og:url" content="https://ryuuless.github.io/uncensored-llm-api-indonesia/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="llms" href="llms.txt">
+<style>:root{--bg:#08090c;--fg:#e8eaf0;--mut:#9aa3b2;--acc:#7c5cff;--acc2:#22d3a6;--line:#1e2230}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(8,9,12,.86);backdrop-filter:blur(8px);z-index:5}
+header .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.brand{font-weight:700;letter-spacing:-.3px}.brand span{color:var(--acc)}
+nav{margin-left:auto;display:flex;gap:16px;font-size:14px}
+.btn{display:inline-block;padding:10px 18px;border-radius:9px;background:linear-gradient(135deg,var(--acc),#5b7cff);color:#fff;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+.hero{padding:72px 0 52px;background:radial-gradient(900px 340px at 20% -10%,rgba(124,92,255,.28),transparent 70%)}
+h1{font-size:clamp(28px,4.4vw,46px);line-height:1.14;margin:0 0 18px;letter-spacing:-.8px}
+.sub{color:var(--mut);font-size:18px;max-width:660px;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:46px 0;border-top:1px solid var(--line)}
+h2{font-size:24px;letter-spacing:-.4px;margin:0 0 18px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{border:1px solid var(--line);border-radius:13px;padding:18px;background:#0b0d13}
+.card h3{margin:0 0 8px;font-size:16px}.card p{margin:0;color:var(--mut);font-size:14.5px}
+pre{background:#0b0d13;border:1px solid var(--line);border-radius:12px;padding:16px;overflow:auto;font-size:13.5px;line-height:1.55}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.6px}
+details{border:1px solid var(--line);border-radius:11px;padding:14px 16px;margin-bottom:10px;background:#0b0d13}
+summary{cursor:pointer;font-weight:600}details p{color:var(--mut);margin:10px 0 0}
+footer{border-top:1px solid var(--line);padding:34px 0 60px;color:var(--mut);font-size:14px}
+footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://uncensored-llm.sbs/#org","name":"uncensored-llm.sbs","url":"https://uncensored-llm.sbs"},{"@type":"WebSite","@id":"https://ryuuless.github.io/uncensored-llm-api-indonesia/#site","url":"https://ryuuless.github.io/uncensored-llm-api-indonesia/","name":"API LLM tanpa sensor untuk developer Indonesia","inLanguage":"id-ID","publisher":{"@id":"https://uncensored-llm.sbs/#org"}},{"@type":"SoftwareApplication","name":"uncensored-llm.sbs API","applicationCategory":"DeveloperApplication","operatingSystem":"Any","url":"https://ryuuless.github.io/uncensored-llm-api-indonesia/","inLanguage":"id-ID","description":"API model bahasa tanpa filter ideologis, kompatibel dengan OpenAI, untuk developer Indonesia. Base URL https://uncensored-llm.sbs/v1, streaming, tool calling, dokumentasi Bahasa Indonesia.","offers":{"@type":"Offer","priceCurrency":"IDR","url":"https://uncensored-llm.sbs","description":"Harga dan ketentuan berlaku: https://uncensored-llm.sbs"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Apakah benar kompatibel dengan OpenAI?","acceptedAnswer":{"@type":"Answer","text":"Ya. /v1/chat/completions, /v1/models, dan streaming SSE memakai format event yang sama. SDK resmi jalan hanya dengan mengganti base_url."}},{"@type":"Question","name":"Ada paket gratis atau uji coba?","acceptedAnswer":{"@type":"Answer","text":"Ketentuan yang berlaku dipublikasikan di https://uncensored-llm.sbs. Perubahan harga diumumkan di sana, bukan di repo ini."}},{"@type":"Question","name":"Apa yang diblokir?","acceptedAnswer":{"@type":"Answer","text":"Konten ilegal, termasuk materi yang melibatkan anak di bawah umur. Jika permintaan tidak masuk ke sana, jawabannya soal permintaan itu."}},{"@type":"Question","name":"Bisa dipakai dengan Open WebUI atau LibreChat?","acceptedAnswer":{"@type":"Answer","text":"Bisa. Keduanya menerima base URL OpenAI-compatible, jadi tinggal isi https://uncensored-llm.sbs/v1 dan API key."}},{"@type":"Question","name":"Bagaimana mengamankan API key?","acceptedAnswer":{"@type":"Answer","text":"Simpan di environment variable per environment, rotasi berkala, jangan pernah di frontend atau repo publik."}}]}]}</script>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">uncensored<span>-llm</span>.sbs</div>
+<nav><a href="#code">Kode</a><a href="#lat">Latensi</a><a href="#faq">FAQ</a></nav></div></header>
+<main>
+<div class="hero"><div class="wrap"><h1>Model yang menjawab, bukan yang menasihati</h1><p class="sub">API kompatibel OpenAI untuk developer Indonesia. Jawaban Bahasa Indonesia natural, streaming, tool calling, tanpa paragraf peringatan di setiap jawaban. Base: https://uncensored-llm.sbs/v1</p>
+<div class="cta"><a class="btn" href="https://uncensored-llm.sbs">Buka API</a><a class="btn ghost" href="#code">Coba sekarang</a></div></div></div>
+<section><div class="wrap"><h2>Yang berubah untuk developer Indonesia</h2><div class="grid">
+<div class="card"><h3>Ganti satu baris</h3><p>Library openai tetap, base_url diganti. Sisa kode tidak disentuh.</p></div>
+<div class="card"><h3>Bahasa Indonesia natural</h3><p>Tanpa nada terjemahan mesin dan tanpa jawaban setengah jadi.</p></div>
+<div class="card"><h3>Streaming dan tools</h3><p>SSE token per token, function calling, JSON mode.</p></div>
+<div class="card"><h3>Tanpa filter ideologis</h3><p>Batas produk ditentukan tim kamu, bukan penyedia model.</p></div>
+</div></div></section>
+<section id="code"><div class="wrap"><h2>Jalan dalam 40 detik</h2><p class="sub">Kompatibel dengan openai>=1.0, LangChain, LlamaIndex, Vercel AI SDK, Open WebUI, dan klien apa pun yang mendukung baseURL kustom.</p>
+<pre><code>curl https://uncensored-llm.sbs/v1/chat/completions \
+  -H "Authorization: Bearer $UNLLM_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"uncensored-llm","messages":[{"role":"user","content":"Jelaskan tanpa bertele-tele bagaimana cara kerja kapitalisasi pasar kripto."}],"stream":true}'</code></pre>
+<pre><code>from openai import OpenAI
+
+client = OpenAI(base_url="https://uncensored-llm.sbs/v1", api_key="sk-...")
+r = client.chat.completions.create(
+    model="uncensored-llm",
+    messages=[{"role": "user", "content": "Jelaskan tanpa bertele-tele bagaimana cara kerja kapitalisasi pasar kripto."}],
+)
+print(r.choices[0].message.content)</code></pre></div></section>
+<section id="lat"><div class="wrap"><h2>Latensi dari kota kamu</h2><p class="sub">Latensi ditentukan operator, bukan bendera negara. Ukur dulu dari mesin kamu:</p>
+<pre><code>curl -o /dev/null -s -w '%{time_total}s\n' https://uncensored-llm.sbs/v1/models</code></pre>
+<table><thead><tr><th>Kota</th><th>Provinsi</th></tr></thead><tbody>
+<tr><td>Jakarta</td><td>DKI Jakarta</td></tr>
+<tr><td>Bandung</td><td>Jawa Barat</td></tr>
+<tr><td>Surabaya</td><td>Jawa Timur</td></tr>
+<tr><td>Yogyakarta</td><td>DI Yogyakarta</td></tr>
+<tr><td>Semarang</td><td>Jawa Tengah</td></tr>
+<tr><td>Medan</td><td>Sumatera Utara</td></tr>
+<tr><td>Palembang</td><td>Sumatera Selatan</td></tr>
+<tr><td>Makassar</td><td>Sulawesi Selatan</td></tr>
+<tr><td>Denpasar</td><td>Bali</td></tr>
+<tr><td>Balikpapan</td><td>Kalimantan Timur</td></tr>
+<tr><td>Pontianak</td><td>Kalimantan Barat</td></tr>
+<tr><td>Jayapura</td><td>Papua</td></tr>
+</tbody></table></div></section>
+<section><div class="wrap"><h2>Biasanya dipakai untuk</h2><div class="grid">
+<div class="card"><h3>Layanan pelanggan</h3><p>Bot yang menyelesaikan masalah, bukan membacakan kebijakan.</p></div>
+<div class="card"><h3>Konten lokal</h3><p>Artikel, skrip, dan email dengan gaya bahasa Indonesia asli.</p></div>
+<div class="card"><h3>Riset keamanan</h3><p>Pengujian ofensif dengan izin tertulis dari klien.</p></div>
+<div class="card"><h3>Fiksi dewasa (18+)</h3><p>Adegan eksplisit antar orang dewasa, tanpa potong adegan.</p></div>
+</div></div></section>
+<section id="faq"><div class="wrap"><h2>Pertanyaan yang benar-benar muncul</h2>
+<details><summary>Apakah benar kompatibel dengan OpenAI?</summary><p>Ya. /v1/chat/completions, /v1/models, dan streaming SSE memakai format event yang sama. SDK resmi jalan hanya dengan mengganti base_url.</p></details>
+<details><summary>Ada paket gratis atau uji coba?</summary><p>Ketentuan yang berlaku dipublikasikan di https://uncensored-llm.sbs. Perubahan harga diumumkan di sana, bukan di repo ini.</p></details>
+<details><summary>Apa yang diblokir?</summary><p>Konten ilegal, termasuk materi yang melibatkan anak di bawah umur. Jika permintaan tidak masuk ke sana, jawabannya soal permintaan itu.</p></details>
+<details><summary>Bisa dipakai dengan Open WebUI atau LibreChat?</summary><p>Bisa. Keduanya menerima base URL OpenAI-compatible, jadi tinggal isi https://uncensored-llm.sbs/v1 dan API key.</p></details>
+<details><summary>Bagaimana mengamankan API key?</summary><p>Simpan di environment variable per environment, rotasi berkala, jangan pernah di frontend atau repo publik.</p></details>
+</div></section>
+</main>
+<footer><div class="wrap"><p>Harga dan ketentuan berlaku: https://uncensored-llm.sbs</p><p>Dokumentasi ini dalam bahasa lain</p><ul>
+<li><a href="https://brown1023.github.io/llm-api-sem-censura-brasil/" hreflang="pt-BR" lang="pt-BR">pt-BR</a></li>
+<li><a href="https://brown1023.github.io/api-llm-sin-censura-latam/" hreflang="es-419" lang="es-419">es-419</a></li>
+<li><a href="https://ryuuless.github.io/uncensored-llm-api-vietnam/" hreflang="vi-VN" lang="vi-VN">vi-VN</a></li>
+<li><a href="https://askcode24.github.io/sansursuz-llm-api-turkiye/" hreflang="tr-TR" lang="tr-TR">tr-TR</a></li>
+<li><a href="https://askcode24.github.io/uncensored-llm-api-deutschland/" hreflang="de-DE" lang="de-DE">de-DE</a></li>
+<li><a href="https://palazuel0s2004.github.io/api-llm-sin-censura-espana/" hreflang="es-ES" lang="es-ES">es-ES</a></li>
+<li><a href="https://palazuel0s2004.github.io/llm-api-senza-censura-italia/" hreflang="it-IT" lang="it-IT">it-IT</a></li>
+<li><a href="https://nirav0712.github.io/uncensored-llm-api-india/" hreflang="en-IN" lang="en-IN">en-IN</a></li>
+<li><a href="https://nirav0712.github.io/uncensored-llm-api-philippines/" hreflang="en-PH" lang="en-PH">en-PH</a></li>
+<li><a href="https://mohamedabderrehman.github.io/uncensored-llm-api-arabia/" hreflang="ar" lang="ar">ar</a></li>
+<li><a href="https://mohamedabderrehman.github.io/uncensored-llm-api-egypt/" hreflang="ar-EG" lang="ar-EG">ar-EG</a></li>
+</ul><p>uncensored-llm.sbs — API kompatibel OpenAI. Konten ilegal, termasuk materi yang melibatkan anak di bawah umur, diblokir. Sisanya tanggung jawab pemanggil.</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# API LLM tanpa sensor untuk developer Indonesia
+
+> API kompatibel OpenAI untuk developer Indonesia. Jawaban Bahasa Indonesia natural, streaming, tool calling, tanpa paragraf peringatan di setiap jawaban. Base: https://uncensored-llm.sbs/v1
+
+Kalau kamu pernah memakai model bahasa untuk menulis soal politik, kesehatan, keamanan ofensif, atau topik apa pun yang dianggap sensitif oleh penyedia asing, kamu tahu hasilnya: penolakan generik, paragraf peringatan menggantikan isi, jawaban setengah. Halaman ini menjelaskan alternatif langsung — API kompatibel OpenAI yang menjawab pertanyaan sebagaimana ditanyakan.
+
+## API
+- Base URL: https://uncensored-llm.sbs/v1
+- Auth: Authorization: Bearer <key>
+- Compatible: OpenAI chat completions, streaming, tool calling
+- Models: GET https://uncensored-llm.sbs/v1/models
+- Docs: https://uncensored-llm.sbs
+
+## Kenapa ini penting untuk developer Indonesia
+Produk lokal sering butuh model yang menulis Bahasa Indonesia dengan register yang benar, bukan terjemahan kaku dari bahasa Inggris. Lebih menjengkelkan lagi ketika model menolak topik normal — biaya kuliah, pinjaman, kesehatan, atau keamanan siber — karena kebijakan yang dibuat untuk pasar lain. Dengan API ini kamu tetap memakai SDK OpenAI, tetap bisa tool calling, tetap streaming, tapi keputusan soal cakupan produk ada di tangan tim kamu. Satu-satunya batas yang dipertahankan adalah konten ilegal.
+
+## Pertanyaan yang benar-benar muncul
+### Apakah benar kompatibel dengan OpenAI?
+Ya. /v1/chat/completions, /v1/models, dan streaming SSE memakai format event yang sama. SDK resmi jalan hanya dengan mengganti base_url.
+
+### Ada paket gratis atau uji coba?
+Ketentuan yang berlaku dipublikasikan di https://uncensored-llm.sbs. Perubahan harga diumumkan di sana, bukan di repo ini.
+
+### Apa yang diblokir?
+Konten ilegal, termasuk materi yang melibatkan anak di bawah umur. Jika permintaan tidak masuk ke sana, jawabannya soal permintaan itu.
+
+### Bisa dipakai dengan Open WebUI atau LibreChat?
+Bisa. Keduanya menerima base URL OpenAI-compatible, jadi tinggal isi https://uncensored-llm.sbs/v1 dan API key.
+
+### Bagaimana mengamankan API key?
+Simpan di environment variable per environment, rotasi berkala, jangan pernah di frontend atau repo publik.
